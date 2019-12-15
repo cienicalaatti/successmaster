@@ -1,11 +1,26 @@
 '''
-Created on 5.12.2019
+Created on 15.12.2019
 
 @author: Juho
 '''
-import serial,time
+#import serial
 
-arduino = serial.Serial('COM3', 9600, timeout=.1)
-
-time.sleep(1)
-
+class TOIMINTA():
+    
+    def __init__(self):
+        
+        #??
+        self.kupit = 1
+    
+    def get_self(self):
+        
+        return self   
+        
+    def get_kupit(self):
+        
+        return self.kupit
+    def set_kupit(self,amount):
+        
+        self.kupit = amount
+        print(self.get_kupit())
+        
