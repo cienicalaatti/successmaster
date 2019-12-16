@@ -3,7 +3,7 @@ Created on 15.12.2019
 
 @author: Juho
 '''
-#import serial
+import serial,time
 
 class TOIMINTA():
     
@@ -11,7 +11,11 @@ class TOIMINTA():
         
         #??
         self.kupit = 1
-    
+        
+        self.start_serial()
+        
+        self.keitto = False
+        
     def get_self(self):
         
         return self   
@@ -19,8 +23,20 @@ class TOIMINTA():
     def get_kupit(self):
         
         return self.kupit
-    def set_kupit(self,amount):
+    def set_amount(self,amount):
         
         self.kupit = amount
-        print(self.get_kupit())
         
+        self.keitto = True
+        
+        n = str(self.get_kupit())
+        
+        self.arduino.write(n.encode())
+        
+    def stop(self):
+        pass
+    
+    def start_serial(self):
+        self.arduino = serial.Serial('COM4', 9600, timeout=.1)
+        
+    

@@ -86,14 +86,13 @@ class VALINTA(QtWidgets.QWidget):
         self.button.setMinimumSize(100, 100)
         self.button.setMaximumSize(120, 120)
         self.button.clicked.connect(self.switch)
-        print(self.increment.value())
         #self.button.clicked.connect(self.stack.toiminta.set_kupit(self.increment.value()))
         
         self.vertical.addWidget(self.button)
         
     def switch(self):
         
-        self.stack.toiminta.set_kupit(self.increment.value())
+        self.stack.toiminta.set_amount(self.increment.value())
         
         self.stack.switch()
         
@@ -118,6 +117,18 @@ class KEITTO(QtWidgets.QWidget):
         self.label = QtWidgets.QLabel("Kahvit on tippumassa!")
         self.label.setFont(QFont("Arial Rounded MT Bold",30))
         self.vertical.addWidget(self.label)
+        
+        
+        self.finish_button = QtWidgets.QPushButton("Valmista")
+        self.finish_button.setMinimumSize(100, 100)
+        self.finish_button.setMaximumSize(120, 120)
+        self.finish_button.clicked.connect(self.switch)
+        self.vertical.addWidget(self.finish_button)
+        
+    def switch(self):
+        
+        self.stack.toiminta.stop()
+        self.stack.switch()
         
         
         

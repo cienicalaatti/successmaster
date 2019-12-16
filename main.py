@@ -6,7 +6,7 @@ Created on 15.12.2019
 import sys
 from PyQt5.QtWidgets import QApplication
 #from GUI import GUI
-from GUI import GRAFIIKKA,VALINTA,KEITTO
+from gui import GRAFIIKKA,VALINTA,KEITTO
 from Tools.scripts.serve import app
 
 
