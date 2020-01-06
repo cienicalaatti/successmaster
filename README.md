@@ -1,5 +1,5 @@
 # successmaster
-Täällä on sitä sähköpajaprojektin hyvää koodia.
+# Täällä on sitä sähköpajaprojektin hyvää koodia.
 
 Kommentointi ja dokumentaatio on ehkä vähän puutteellista, work in progress
 
