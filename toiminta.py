@@ -4,6 +4,7 @@ Created on 15.12.2019
 @author: Juho
 '''
 import serial,time
+from time import sleep
 
 class TOIMINTA():
     
@@ -33,8 +34,13 @@ class TOIMINTA():
         
         self.arduino.write(n.encode())
         
+        
     def stop(self):
-        pass
+        self.arduino.write(b'n')
+        
+        self.keitto = False
+        
+
     
     def start_serial(self):
         self.arduino = serial.Serial('COM4', 9600, timeout=.1)

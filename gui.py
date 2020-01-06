@@ -78,7 +78,7 @@ class VALINTA(QtWidgets.QWidget):
         
         self.increment = QtWidgets.QSpinBox()
         self.increment.setMinimum(1)
-        self.increment.setMaximum(10)
+        self.increment.setMaximum(9)
         self.increment.setValue(1)
         self.vertical.addWidget(self.increment)
         
