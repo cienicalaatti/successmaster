@@ -1,5 +1,6 @@
 # successmaster
 # Täällä on sitä sähköpajaprojektin hyvää koodia.
+  (ruskeaa pythonia)
 
 Kommentointi ja dokumentaatio on ehkä vähän puutteellista, work in progress
 
